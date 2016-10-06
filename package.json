@@ -1,0 +1,26 @@
+{
+  "name": "@lourd/code-splitting",
+  "version": "1.0.0",
+  "description": "Simple example showing code splitting",
+  "author": "Louis DeScioli <louis.descioli@gmail.com>",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.8"
+  },
+  "scripts": {
+    "build": "rm -rf build/ && webpack",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
