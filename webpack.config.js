@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -18,13 +17,19 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
       },
+      {
+        test: /\.css?$/,
+        loaders: ['style', 'css'],
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Code Splitting',
+    }),
   ],
   devServer: {
     contentBase: './build',

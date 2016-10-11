@@ -1,0 +1,22 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 36px;
+}
+
+a {
+  padding: 15px 10px;
+}
+
+#App {
+  max-width: 400px;
+  margin: auto;
+}
+
+#links {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+}

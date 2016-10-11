@@ -1,8 +1,10 @@
 import React from 'react'
 
 /**
- * Returns a promise that resolves to a Component class
- * @param  {Function} getComponent fetches a Component class to instantiate
+ * Simple wrapper component that gets its child element from a given
+ *   promise-returning function
+ * @param  {Function} getComponent Returns a Promise that resolves to a
+ *   Component class
  * @return {Component}
  */
 export default function asyncComponent(getComponent) {
@@ -19,10 +21,9 @@ export default function asyncComponent(getComponent) {
     }
 
     render() {
-      const { Component } = this.state
-      return Component
-        ? <Component {...this.props} />
-        : <h3>Loading...</h3>
+      return this.state.Component
+        ? <this.state.Component {...this.props} />
+        : <h1>Loading...</h1>
     }
   }
 }
