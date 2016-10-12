@@ -21,7 +21,7 @@
     "webpack-dev-server": "^2.1.0-beta.8"
   },
   "scripts": {
-    "build": "rm -rf build/ && webpack",
+    "build": "rm -rf docs/ && webpack",
     "dev": "webpack-dev-server"
   },
   "license": "MIT"

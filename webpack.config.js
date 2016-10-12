@@ -6,7 +6,7 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    path: path.join(__dirname, './build'),
+    path: path.join(__dirname, './docs'),
     filename: "[name].[chunkhash:6].js",
     chunkFilename: "chunk.[id].[chunkhash:6].js"
   },
@@ -32,7 +32,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: './build',
+    contentBase: './docs',
     progress: true,
   }
 }
