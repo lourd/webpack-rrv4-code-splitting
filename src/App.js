@@ -13,14 +13,10 @@ import Home from './Home'
 import Sync from './Sync'
 import './App.css'
 
-const Foo = asyncComponent(() => {
-  // Webpack understands to make a new "chunk" when it sees `System.import` used
-  // It will rewire './Foo' to the filename of the respective "chunk"
-  return System.import('./Foo').then(module => module.default)
-})
-const Bar = asyncComponent(() => {
-  return System.import('./Bar').then(module => module.default)
-})
+// Webpack understands to make a new "chunk" when it sees `import` used
+// It will rewire './Foo' to the filename of the respective "chunk"
+const Foo = asyncComponent(() => import('./Foo').then(module => module.default))
+const Bar = asyncComponent(() => import('./Bar').then(module => module.default))
 
 const App = () =>
   <HashRouter>
@@ -36,6 +32,12 @@ const App = () =>
       <Match pattern="/bar" component={Bar} />
       <Match pattern="/sync" component={Sync} />
       <Match pattern="/" exactly component={Home} />
+      <a
+        href="https://github.com/lourd/webpack-rrv4-code-splitting"
+        target="_blank"
+      >
+        Source code on GitHub
+      </a>
     </div>
   </HashRouter>
 

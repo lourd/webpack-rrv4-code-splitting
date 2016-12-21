@@ -1,12 +1,13 @@
 webpackJsonp([0],{
 
-/***/ 213:
+/***/ 218:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Foo_css__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Foo_css__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Foo_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Foo_css__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -41,10 +42,10 @@ var Foo = function (_Component) {
 
 /***/ },
 
-/***/ 214:
+/***/ 219:
 /***/ function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(62)();
+exports = module.exports = __webpack_require__(57)();
 // imports
 
 
@@ -56,16 +57,16 @@ exports.push([module.i, "#Foo {\n  color: red;\n}\n", ""]);
 
 /***/ },
 
-/***/ 215:
+/***/ 220:
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(214);
+var content = __webpack_require__(219);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(63)(content, {});
+var update = __webpack_require__(58)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {

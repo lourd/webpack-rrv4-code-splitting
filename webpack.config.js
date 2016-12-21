@@ -2,37 +2,31 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: {
-    app: './src/index.js',
-  },
+  entry: [
+    path.resolve('src/index.js'),
+  ],
   output: {
-    path: path.join(__dirname, './docs'),
-    filename: "[name].[chunkhash:6].js",
-    chunkFilename: "chunk.[id].[chunkhash:6].js"
+    path: path.resolve('docs'),
+    filename: '[name].[chunkhash:6].js',
+    chunkFilename: 'chunk[id].[chunkhash:6].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel',
+        test: /\.js$/,
+        include: path.resolve('src'),
+        loader: 'babel-loader',
       },
       {
-        test: /\.css?$/,
-        loaders: ['style', 'css'],
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Code Splitting',
+      inject: true,
+      template: path.resolve('src/index.html'),
     }),
   ],
-  devServer: {
-    contentBase: './docs',
-    progress: true,
-  }
 }
